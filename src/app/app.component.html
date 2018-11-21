@@ -1,20 +1,132 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<section>
+  <div class="container">
+    <div class="heading">
+      <h1>
+        Case Forms
+      </h1>
+    </div>
+    <div class="main-wrapp clearfix">
+    <div class="list">
+      <h3>Form List</h3>
+      <ul style="list-style-type:none" class="form-list">
+        <li *ngFor="let i of listArray">
+          <input type="checkbox" [name]="i.name" [value]="i.name" [id]="i.id" [checked]="i.default" [disabled]="i.default"
+            class="checkbox" (change)="showform($event)">{{i.name}}
+        </li>
+      </ul>
+    </div>
+    <div class="forms-main">
+    <div class="forms" *ngFor="let j of selectedForm" [ngSwitch]="j.id">
+      <div *ngSwitchCase="1">
+        <h1>Form 1</h1>
+        <form ngForm="form1">
+          <div class="form-group">
+            <input type="text" class="form-control" name="fname" placeholder="First Name">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="lname" placeholder="Last Name">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="address" placeholder="Address">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="number" placeholder="Mobile Number">
+          </div>
+        </form>
+      </div>
 
+      <div *ngSwitchCase="2">
+        <h1>Form 2</h1>
+        <form ngForm="form2">
+          <div class="form-group">
+            <input type="text" class="form-control" name="fname" placeholder="First Name">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="lname" placeholder="Last Name">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="address" placeholder="Address">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="number" placeholder="Mobile Number">
+          </div>
+        </form>
+      </div>
+
+      <div *ngSwitchCase="3">
+        <h1>Form 3</h1>
+        <form ngForm="form3">
+          <div class="form-group">
+            <input type="text" class="form-control" name="fname" placeholder="First Name">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="lname" placeholder="Last Name">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="address" placeholder="Address">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="number" placeholder="Mobile Number">
+          </div>
+        </form>
+      </div>
+
+      <div *ngSwitchCase="4">
+        <h1>Form 4</h1>
+        <form ngForm="form4">
+          <div class="form-group">
+            <input type="text" class="form-control" name="fname" placeholder="First Name">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="lname" placeholder="Last Name">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="address" placeholder="Address">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="number" placeholder="Mobile Number">
+          </div>
+        </form>
+      </div>
+
+      <div *ngSwitchCase="5">
+        <h1>Form 5</h1>
+        <form ngForm="form5">
+          <div class="form-group">
+            <input type="text" class="form-control" name="fname" placeholder="First Name">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="lname" placeholder="Last Name">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="address" placeholder="Address">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="number" placeholder="Mobile Number">
+          </div>
+        </form>
+      </div>
+
+      <div *ngSwitchCase="6">
+        <h1>Form 6</h1>
+        <form ngForm="form6">
+          <div class="form-group">
+            <input type="text" class="form-control" name="fname" placeholder="First Name">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="lname" placeholder="Last Name">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="address" placeholder="Address">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="number" placeholder="Mobile Number">
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div> 
+</div>
+  </div>
+</section>
